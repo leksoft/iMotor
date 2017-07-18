@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+span.required{
+    font-family: "Lucida Grande","Lucida Sans Unicode",Verdana,Arial,Helvetica,sans-serif;
+    font-size:16px;
+    color:#ff2d2d;
+}
+.right{
+    text-align: right;
+}
+.comment{
+    color: #8b8b8b;
+}

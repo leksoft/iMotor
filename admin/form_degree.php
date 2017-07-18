@@ -1,0 +1,30 @@
+<?php
+// รับ id ใช้ในกรณี แสดงข้อมูลด้วยปุ่มแก้ไข
+@$id = $_GET['id'];
+
+// ตรวจสอบค่า id
+if (!empty($id)) {
+    // กรณี id มีข้อมูลส่งมา
+    // จะทำการดึงข้อมูลออกมาแสดง
+    $rs = mysql_query('SELECT * FROM tbdegree WHERE id = ' . $id);
+    // นำข้อมูลมาเก็บใส่ตัวแปร
+    $val = mysql_fetch_assoc($rs);
+}
+?>
+<!-- form สำหรับการเพิ่มข้อมูล และ แก้ไขสาขา -->
+<div style="margin-top:30px;">
+    <form class="form-horizontal" action="save_degree.php" method="post">
+        <legend>เพิ่มรายการสาขา</legend>
+        <div class="control-group">
+            <label for="name" class="control-label">สาขา	</label>
+            <div class="controls">
+                <input type="text" name="name" class="span6" value="<?php echo @$val['name']; ?>">
+            </div>
+        </div>
+        <div class="form-actions">
+            <input type="hidden" name="id" value="<?php echo @$val['id']; ?>">
+            <input class="btn btn-success btn-large" type="submit" value="บันทึก">
+            <input class="btn btn-large" type="button" value="ยกเลิก" onclick="window.location.href = 'index.php?url=index_degree.php';">
+        </div>
+    </form>
+</div>

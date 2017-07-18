@@ -1,0 +1,78 @@
+table.display thead th {
+    /*cursor: pointer;*/
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px 0 3px 5px;
+}
+table.display {
+    border-collapse: collapse;
+    border-left: 1px solid #D3D3D3;
+    border-right: 1px solid #D3D3D3;
+    clear: both;
+    font: 13px/1.45em "Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
+    margin: 0 auto;
+    width: 100%;
+}
+table.display tfoot th {
+    font-weight: normal;
+    padding: 3px 0 3px 10px;
+}
+table.display tr.heading2 td {
+    border-bottom: 1px solid #AAAAAA;
+}
+table.display td {
+    padding: 3px 10px;
+}
+table.display td.center {
+    text-align: center;
+}
+table.display tr.odd {
+    background-color: #F8F8F8;
+}
+table.display tr.even {
+    background-color: #FFFFFF;
+}
+table.display tr:hover {
+    background-color: #E8EAEF;
+}
+table.display tr td {
+    border-left: 1px dotted #BEBEBE;
+}
+
+tfoot input {
+    color: #444444;
+    margin: 0.5em 0;
+    width: 100%;
+}
+tfoot input.search_init {
+    color: #999999;
+}
+td.group {
+    background-color: #D1CFD0;
+    border-bottom: 2px solid #A19B9E;
+    border-top: 2px solid #A19B9E;
+}
+td.details {
+    background-color: #D1CFD0;
+    border: 2px solid #A19B9E;
+}
+.normal-t {
+    border-bottom: 1px solid #D3D3D3;
+}
+.normal-t th {
+    background: url("../images/table_th_bg.gif") repeat-x scroll bottom left #f9f9f9;
+    border-right: 1px solid #D3D3D3;
+    outline: medium none;
+    height:21px;
+    color: #555555;
+    font-weight: normal;
+}
+.normal-t tr:nth-child(2n+1) {
+    background-color: #F8F8F8;
+}
+.normal-t tr:nth-child(2n) {
+    background-color: #FFFFFF;
+}
+.normal-t tr:hover {
+    background-color: #E8EAEF;
+}

@@ -1,0 +1,30 @@
+<?php 
+// ดึงข้อมูลมาใส่ ตัวแปร
+$rs = mysql_query('SELECT * FROM tbuser');
+?>
+
+<table class="table table-bordered table-striped table-hover">
+	<thead>
+		<tr>
+                         <th width="50px">ลำดับ</th>
+			<th>ชื่อ-สกุล</th>
+			<th>เบอร์โทร</th>
+			<th>ระดับ</th>
+			<th class="text-center" width="50px">แก้ไข</th>
+			<th class="text-center" width="50px">ลบ</th>
+		</tr>
+	</thead>
+	<tbody>
+		<!-- ดึงข้อมูลมาแสดง -->
+		<?php $i = 1;  while($val = mysql_fetch_assoc($rs)): ?>
+		<tr>
+                         <td><?php echo $i++;?></td>
+			<td><?php echo $val['fname'].' '.$val['lname']; ?></td>			
+			<td><?php echo $val['tel']; ?></td>	
+			<td><?php echo get_level($val['type']); ?></td>
+			<td class="text-center"><a href="index.php?url=form_user.php&id=<?php echo $val['id']; ?>"><i class="icon icon-edit"></i></a></td>
+			<td class="text-center"><a href="delete_user.php?id=<?php echo $val['id']; ?>" onclick="return confirm('ยืนยันการลบ ?');"><i class="icon icon-trash"></i></a></td>
+		</tr>
+		<?php endwhile; ?>
+	</tbody>
+</table>
