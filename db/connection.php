@@ -1,5 +1,5 @@
 <?php
-
+//database connection
 // สั่งเชื่อมต่อฐานข้อมูล
 $link = mysql_connect('localhost', 'root', 'root');
 
